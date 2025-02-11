@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "541969541924",
+    "project_id": "kapil-database",
+    "storage_bucket": "kapil-database.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541969541924:android:d5f07e622790397cd2a1b1",
+        "android_client_info": {
+          "package_name": "com.example.database_demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBz02VvZWUbaXFDsdsFSMOM25g6Fa10EQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
