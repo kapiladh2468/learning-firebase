@@ -12,4 +12,17 @@ class Company {
 
   Company({this.address,this.name,this.phone,this.establishedAt,this.services,this.id});
 
+  toJson(){
+    Map<String,dynamic> json ={};
+    json['id'] =id;
+    json['name'] = name;
+    json['address']= address;
+    json ['services']= services;
+    json ['establishedAt'] =establishedAt;
+    json ['phone']= phone;
+
+
+return json;
+  }
+
 }

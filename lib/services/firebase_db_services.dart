@@ -22,9 +22,10 @@ getAllData()async{
         id: id,
       name: data['name']??"No name provided",
         address:data['address']?? "No address provided",
-        phone:data['phone'],
        services:data['services'],
-        establishedAt:  data['establishedAt'] 
+        establishedAt:  data['establishedAt'],
+        phone:data['phone']??00
+        
       );
       allCompanies.add(newCompany);
     }
@@ -46,13 +47,25 @@ print("The error is $e");
 
   }
 
-  addCompany(Company company) {
+  addCompany(Company company)async {
+   try{ await companyCollection.add(company.toJson());
+   }
+
+    catch(e){
+print("error is $e");
+   }
 
   }
 
-  updateCompany(Company company) {
-    
+  updateCompany(Company company) async {
+  try {
+    await companyCollection.doc(company.id).update(company.toJson());
+    print("Successfully updated company ");
+  } catch (e) {
+    print("Error updating company: $e");
   }
+}
+
 }
 
 

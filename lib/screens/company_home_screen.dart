@@ -24,7 +24,20 @@ class CompanyHomeScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return ListTile(
                   title: Text(allCompanies[index].name!),
-                  subtitle: Text(allCompanies[index].address!),
+                  subtitle:Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [ Text(allCompanies[index].address!),
+                     
+                     Row(
+                      children: [
+                        Text(allCompanies[index].phone!.toString()),
+                      ],
+                      
+                    )
+                   
+                    ],
+                  ),
+    
                   trailing: PopupMenuButton(
                     onSelected: (value) async {
                       if (value == 'edit') {
